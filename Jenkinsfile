@@ -9,27 +9,29 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''./jenkins/build.sh
-        sudo chmod 777 ./jenkins/build.sh'''
+        sh '''sudo chmod 777 ./jenkins/build.sh
+        ./jenkins/build.sh'''
       }
     }
     stage('Login') {
       steps {
-        sh '''./jenkins/login.sh
-        sudo chmod 777 ./jenkins/login.sh'''
+        sh '''sudo chmod 777 ./jenkins/login.sh
+        ./jenkins/login.sh'''
       }
     }
     stage('Push') {
       steps {
-        sh '''./jenkins/push.sh
-        sudo chmod 777 ./jenkins/push.sh'''
+        sh '''sudo chmod 777 ./jenkins/push.sh
+        ./jenkins/push.sh
+        '''
       }
     }
   }
   post {
     always {
-      sh '''./jenkins/logout.sh
-      sudo chmod 777 ./jenkins/logout.sh'''
+      sh '''sudo chmod 777 ./jenkins/logout.sh
+      ./jenkins/logout.sh
+      '''
     }
   }
 }
