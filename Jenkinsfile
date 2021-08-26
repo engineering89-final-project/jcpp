@@ -15,7 +15,7 @@ node {
             }    
         }     
         stage('Push image') {
-            docker.withRegistry('', 'eng89_docker') {
+            docker.withRegistry('', 'eng89gang') {
                sh "sudo docker login -u eng89gang -p bruhmoment"
                app.push("${env.BUILD_NUMBER}")            
                app.push("latest") 
