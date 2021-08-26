@@ -17,17 +17,26 @@ pipeline {
     }
     stage('Login') {
       steps {
+        script {
+          sudo chmod 777 ./jenkins/login.sh
+        }
         sh './jenkins/login.sh'
       }
     }
     stage('Push') {
       steps {
+        script {
+          sudo chmod 777 ./jenkins/push.sh
+        }
         sh './jenkins/push.sh'
       }
     }
   }
   post {
     always {
+      script {
+          sudo chmod 777 ./jenkins/logout.sh
+        }
       sh './jenkins/logout.sh'
     }
   }
