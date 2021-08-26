@@ -14,10 +14,12 @@ node {
              sh 'echo "Tests passed"'        
             }    
         }     
-       stage('Push image') {
-           docker.withRegistry('https://registry.hub.docker.com', 'eng89_docker') {            
+        stage('Push image') {
+            docker.withRegistry('', 'eng89_group') {
+               sh "docker login -u eng89gang -p bruhmoment"
                app.push("${env.BUILD_NUMBER}")            
-               app.push("latest")        
-              }    
-           }
+               app.push("latest") 
+        //    docker.withRegistry('https://registry.hub.docker.com', 'eng89_docker') {                   
+            }    
         }
+}
