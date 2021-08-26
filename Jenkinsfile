@@ -15,7 +15,7 @@ node {
             }    
         }     
        stage('Push image') {
-           docker.withRegistry('https://registry.hub.docker.com', 'eng89gang') {            
+           docker.withRegistry('https://registry.hub.docker.com', 'git') {            
                app.push("${env.BUILD_NUMBER}")            
                app.push("latest")        
               }    
