@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sudo chmod 777 ./jenkins/build.sh
+        sudo chmod +x ./jenkins/build.sh
         sh './jenkins/build.sh'
       }
     }
