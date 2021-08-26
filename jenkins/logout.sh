@@ -1,2 +1,2 @@
 #!/bin/bash
-docker logout
+sudo docker logout
