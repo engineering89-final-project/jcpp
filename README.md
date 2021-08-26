@@ -1,4 +1,4 @@
-# Job Search Project - Dev branch second commit
+# Job Search Projectt
 Now with [Docker](https://github.com/monotiller/engineering89-job-project-group-2/tree/docker) support
 
 ## Breifing
