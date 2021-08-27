@@ -2,7 +2,7 @@ flask
 flask_wtf
 passlib
 requests
-pandas==1.3.2
+pandas
 flask_table
 list_function
 lxml
