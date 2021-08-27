@@ -1,4 +1,4 @@
-FROM python
+FROM python:slim-bullseye
 WORKDIR /usr/src/project
 COPY . .
 RUN apt-get update && apt-get install -f -y
