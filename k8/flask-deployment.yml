@@ -17,9 +17,3 @@ spec:
           image: eng89gang/project_docker_app
           ports:
             - containerPort: 5000
-          # env:
-          #   - name: DB_HOST
-          #     value: mongodb://mongo:27017/posts
-          # # command: [""]
-          # # args: ["node","seeds/seed.js"]
-          # imagePullPolicy: Always
