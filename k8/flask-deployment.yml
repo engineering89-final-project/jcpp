@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask
+spec:
+  selector:
+    matchLabels:
+      app: flask
+  replicas: 3
+  template: 
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+        - name: flask
+          image: eng89gang/project_docker_app
+          ports:
+            - containerPort: 5000
+          # env:
+          #   - name: DB_HOST
+          #     value: mongodb://mongo:27017/posts
+          # # command: [""]
+          # # args: ["node","seeds/seed.js"]
+          # imagePullPolicy: Always

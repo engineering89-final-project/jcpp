@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-08-23T11:07:26Z"
+  name: flask
+  namespace: default
+  resourceVersion: "40884"
+  uid: 9190ab75-d61c-4ff4-a3d1-0d293fa8d72e
+spec:
+  ports:
+    - nodePort: 30442
+      port: 5000
+      protocol: TCP
+      targetPort: 5000
+  selector:
+    app: flask
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+      - hostname: localhost
