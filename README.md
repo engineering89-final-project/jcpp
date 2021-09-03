@@ -1,4 +1,4 @@
-# Job Search Project
+# Engineering 89 Final Project
 Now with [Docker](https://github.com/monotiller/engineering89-job-project-group-2/tree/docker) support
 
 ## Breifing
