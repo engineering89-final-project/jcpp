@@ -165,7 +165,7 @@ def render_role(role):
     scrap = RolesScrap().scrap(role)
     cdata = RolesDatabase().view_sorted_roles('job_role', 'ASC', True)
     labels = [row[0] for row in cdata]
-    values = [row[3] for row in cdata]
+    values = [row[4] for row in cdata]
     colour = []
     for row in cdata:
         if row[0] == role.replace('_', ' '):
